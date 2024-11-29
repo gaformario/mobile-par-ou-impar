@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
-import 'cadastro_page.dart';
+import 'home_screen.dart';
 
 void main() {
-  runApp(ParOuImparApp());
+  runApp(const ParOuImparApp());
 }
 
 class ParOuImparApp extends StatelessWidget {
+  const ParOuImparApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Par ou Ímpar',
+      debugShowCheckedModeBanner: false,
+      title: 'Jogo de Par ou Ímpar',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: CadastroPage(),
+      home: const HomeScreen(),
     );
   }
 }
